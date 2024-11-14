@@ -29,6 +29,8 @@ This project requires the following dependencies:
 - C++ compiler with support for C++17 standard  
   支援 C++17 標準的 C++ 編譯器
 
+- Strongly recommend re-write your own CMakeLists.txt, some of the context are specificly for arm64 but not X86
+強烈建議重新撰寫CMakeLists.txt，其中有些內容是針對arm64而非X86
 ## Building and Running 構建與執行
 
 1. Clone the repository  
@@ -59,8 +61,11 @@ This project requires the following dependencies:
    ./manga_classifier
    ```
 
-The classifier will train on the provided dataset, test the model, and report the classification accuracy. The trained model will be saved as manga_classifier_model.yml.
-分類器將會使用提供的數據集進行訓練，測試模型並報告分類準確率。訓練完成的模型將會保存為 manga_classifier_model.yml。
+The classifier will train on the provided dataset, test the model, and report the classification accuracy. The trained model will be saved as manga_classifier_{model you use}_model.yml.
+分類器將會使用提供的數據集進行訓練，測試模型並報告分類準確率。訓練完成的模型將會保存為 manga_classifier_{model you use}_model.yml。
+
+To swap between KNN, SVM, RF model, un-comment and comment the specific main function
+註解和取消註解需要的main函式以切換最近鄰居，支援向量機，以及隨機森林訓練模型
 
 ## Dataset 數據集
     The project expects the dataset to be organized as follows:
@@ -69,8 +74,8 @@ The classifier will train on the provided dataset, test the model, and report th
     dataset/
     ├── manga_covers/
     └── real_photos/
-    Each directory should contain 800 images, with 650 images used for training and 150 images used for testing.
-    每個目錄應包含 800 張圖像，其中 650 張用於訓練，150 張用於測試。
+    Each directory should contain 4000 images, with 3800 images used for training and 200 images used for testing.
+    每個目錄應包含 4000 張圖像，其中 3800 張用於訓練，200 張用於測試。
 
 ## Future Improvements 未來改進
     Some potential improvements for this project include:

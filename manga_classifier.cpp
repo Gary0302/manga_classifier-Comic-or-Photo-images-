@@ -142,8 +142,8 @@ void prepareDataset(const std::string& manga_dir, const std::string& photo_dir,
 //         }
         
 //         cv::Mat trainData, trainLabels, testData, testLabels;
-//         int train_samples = 650;
-//         int test_samples = 150;
+//         int train_samples = 3600;
+//         int test_samples = 400;
         
 //         std::cout << "Preparing dataset..." << std::endl;
 //         prepareDataset(manga_dir, photo_dir, train_samples, test_samples,
@@ -174,7 +174,7 @@ void prepareDataset(const std::string& manga_dir, const std::string& photo_dir,
 //         //svm
 //         svm->save("manga_classifier_model.yml");
 
-//         std::cout << "Model saved as 'manga_classifier_model.yml'" << std::endl;
+//         std::cout << "Model saved as 'manga_classifier_svm_model.yml'" << std::endl;
         
 //     } catch (const std::exception& e) {
 //         std::cerr << "Error: " << e.what() << std::endl;
@@ -200,8 +200,8 @@ void prepareDataset(const std::string& manga_dir, const std::string& photo_dir,
 //         }
         
 //         cv::Mat trainData, trainLabels, testData, testLabels;
-//         int train_samples = 650;
-//         int test_samples = 150;
+//         int train_samples = 3600;
+//         int test_samples = 400;
         
 //         std::cout << "Preparing dataset..." << std::endl;
 //         prepareDataset(manga_dir, photo_dir, train_samples, test_samples,
@@ -262,8 +262,8 @@ int main() {
         }
         
         cv::Mat trainData, trainLabels, testData, testLabels;
-        int train_samples = 650;
-        int test_samples = 150;
+        int train_samples = 3600;
+        int test_samples = 400;
         
         std::cout << "Preparing dataset..." << std::endl;
         prepareDataset(manga_dir, photo_dir, train_samples, test_samples,
