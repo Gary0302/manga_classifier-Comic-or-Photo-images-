@@ -5,15 +5,20 @@ This is a C++ project that uses OpenCV to build a classifier for distinguishing 
 
 ## Overview 概述
 
-The project uses Histogram of Oriented Gradients (HOG) features and a Support Vector Machine (SVM) classifier to analyze images and determine whether they are manga covers or regular photographs.  
-此專案透過方向梯度直方圖（Histogram of Oriented Gradients，簡稱 HOG）特徵與支持向量機（SVM）分類器來分析圖像，以判別它們是漫畫封面還是真實照片。
+The project uses Histogram of Oriented Gradients (HOG) features and a Support Vector Machine (SVM), k-Nearest Neighbor (kNN),  Random Forest (RF) classifier to analyze images and determine whether they are manga covers or regular photographs.  
+此專案透過方向梯度直方圖（Histogram of Oriented Gradients，簡稱 HOG）特徵與支持向量機（SVM）分類器，最近鄰居分類器（kNN），隨機森林分類器（RF）來分析圖像，以判別它們是漫畫封面還是真實照片。
+
+Note: In this case, kNN performs around 56 precent accuracy, SVM performs around 52 percent accuracy, and RF performs around 89 percent accuracy, so using RF as your classifier are recommend.
+補充：在此特定情況下，kNN表現約56%準確率，SVM表現約52%準確率，RF表現約ㄞ89%準確率，所以建議用RF作為分類器
+
+
 
 ### Key Features 專案的主要功能
 
 - **Data preparation 數據準備**: Splitting the dataset into training and testing sets, and extracting HOG features from the images.  
   將數據集拆分為訓練集和測試集，並從圖片中提取 HOG 特徵。
-- **Model training 模型訓練**: Training SVM classifier, KNN classifier, RF classifier to learn the differences between manga covers and real photographs.  
-  訓練 SVM 分類器, KNN 分類器, RF 分類器，以學習漫畫封面與真實照片之間的差異。
+- **Model training 模型訓練**: Training SVM classifier, kNN classifier, RF classifier to learn the differences between manga covers and real photographs.  
+  訓練 SVM 分類器, kNN 分類器, RF 分類器，以學習漫畫封面與真實照片之間的差異。
 - **Model evaluation 模型評估**: Testing the trained model on the test set and reporting the classification accuracy.  
   在測試集上測試訓練好的模型並報告分類準確率。
 - **Model persistence 模型保存**: Saving the trained model to a file for future use.  
@@ -64,8 +69,8 @@ This project requires the following dependencies:
 The classifier will train on the provided dataset, test the model, and report the classification accuracy. The trained model will be saved as manga_classifier_{model you use}_model.yml.
 分類器將會使用提供的數據集進行訓練，測試模型並報告分類準確率。訓練完成的模型將會保存為 manga_classifier_{model you use}_model.yml。
 
-To swap between KNN, SVM, RF model, un-comment and comment the specific main function
-註解和取消註解需要的main函式以切換最近鄰居，支援向量機，以及隨機森林訓練模型
+To swap between kNN, SVM, RF model, un-comment and comment the specific main function
+註解和取消註解需要的main函式以切換最近鄰居，支援向量機，以及隨機森林分類器
 
 ## Dataset 數據集
     The project expects the dataset to be organized as follows:
