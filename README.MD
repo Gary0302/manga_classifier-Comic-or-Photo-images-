@@ -9,7 +9,7 @@ The project uses Histogram of Oriented Gradients (HOG) features and a Support Ve
 此專案透過方向梯度直方圖（Histogram of Oriented Gradients，簡稱 HOG）特徵與支持向量機（SVM）分類器，最近鄰居分類器（kNN），隨機森林分類器（RF）來分析圖像，以判別它們是漫畫封面還是真實照片。
 
 Note: In this case, kNN performs around 56 precent accuracy, SVM performs around 52 percent accuracy, and RF performs around 89 percent accuracy, so using RF as your classifier are recommend.
-補充：在此特定情況下，kNN表現約56%準確率，SVM表現約52%準確率，RF表現約ㄞ89%準確率，所以建議用RF作為分類器
+補充：在此特定情況下，kNN表現約56%準確率，SVM表現約52%準確率，RF表現約89%準確率，所以建議用RF作為分類器
 
 
 
