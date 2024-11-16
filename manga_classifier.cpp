@@ -40,20 +40,24 @@ void prepareDataset(const std::string& manga_dir, const std::string& photo_dir,
                    int train_samples, int test_samples,
                    cv::Mat& trainData, cv::Mat& trainLabels,
                    cv::Mat& testData, cv::Mat& testLabels) {
+    // 使用傳入的 manga_dir 和 photo_dir 參數，而不是硬編碼的路徑
+    std::string manga_directory = manga_dir;  // 使用傳入的參數
+    std::string real_photos_directory = photo_dir;  // 使用傳入的參數
+
     std::vector<std::string> manga_files;
     std::vector<std::string> photo_files;
     
-    // Load manga files
-    for (const auto& entry : fs::directory_iterator(manga_dir)) {
+    // Load manga files with absolute paths
+    for (const auto& entry : fs::directory_iterator(manga_directory)) {
         if (entry.path().extension() == ".jpg" || entry.path().extension() == ".png") {
-            manga_files.push_back(entry.path().string());
+            manga_files.push_back(fs::absolute(entry.path()).string());
         }
     }
     
-    // Load photo files
-    for (const auto& entry : fs::directory_iterator(photo_dir)) {
+    // Load photo files with absolute paths
+    for (const auto& entry : fs::directory_iterator(real_photos_directory)) {
         if (entry.path().extension() == ".jpg" || entry.path().extension() == ".png") {
-            photo_files.push_back(entry.path().string());
+            photo_files.push_back(fs::absolute(entry.path()).string());
         }
     }
     
@@ -126,6 +130,8 @@ void prepareDataset(const std::string& manga_dir, const std::string& photo_dir,
         }
     }
 }
+
+
 
 
 // //SVM classifier around 50 percent accuracy
