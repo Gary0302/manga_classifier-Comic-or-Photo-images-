@@ -68,7 +68,8 @@ This project requires the following dependencies:
    執行分類器：
    ```bash
    ./manga_classifier #for arm
-
+   ```
+   ```powershell
    your/drectory/manga_classifier.exe #for x86
    ```
 
