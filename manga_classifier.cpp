@@ -249,7 +249,7 @@ void prepareDataset(const std::string& manga_dir, const std::string& photo_dir,
 
 
 
-//RF classifier around 85 percent accuracy
+//RF classifier around 89 percent accuracy
 int main() {
     try {
         std::string manga_dir = "../dataset/manga_covers";

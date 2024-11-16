@@ -57,13 +57,19 @@ This project requires the following dependencies:
 3. Build the project
    編譯專案：
    ```bash
-   make
+   make #for arm
    ```
+   ```powershell
+   cmake --build . #for x86
+   ```
+
 
 4. Run the classifier
    執行分類器：
    ```bash
-   ./manga_classifier
+   ./manga_classifier #for arm
+
+   your/drectory/manga_classifier.exe #for x86
    ```
 
 The classifier will train on the provided dataset, test the model, and report the classification accuracy. The trained model will be saved as manga_classifier_{model you use}_model.yml.
@@ -81,7 +87,9 @@ To swap between kNN, SVM, RF model, un-comment and comment the specific main fun
     └── real_photos/
     Each directory should contain 4000 images, with 3800 images used for training and 200 images used for testing.
     每個目錄應包含 4000 張圖像，其中 3800 張用於訓練，200 張用於測試。
-
+    
+    can adjest the numbers by your dataset (this number is for the sample accuracy)
+    請依照你的資料及去調整數字（示範精準度由此數字得出）
 ## Future Improvements 未來改進
     Some potential improvements for this project include:
     本專案的潛在改進包括：
