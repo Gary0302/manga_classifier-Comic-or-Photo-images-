@@ -8,7 +8,8 @@ This is a C++ project that uses OpenCV to build a classifier for distinguishing 
 ## Overview 概述
 
 
-The project uses Histogram of Oriented Gradients (HOG) features and one of three classifiers to analyze images and determine whether they are manga covers or regular photographs. The three available classifiers are: Support Vector Machine (SVM), k-Nearest Neighbor (kNN), and Random Forest (RF) classifier.
+The project uses Histogram of Oriented Gradients (HOG) features and one of three classifiers to analyze images and determine whether they are manga covers or regular photographs. The three available classifiers are: Support Vector Machine (SVM), k-Nearest Neighbor (kNN), and Random Forest (RF).
+
 此專案透過方向梯度直方圖（Histogram of Oriented Gradients，簡稱 HOG）特徵與支持向量機（SVM）分類器，最近鄰居分類器（kNN），隨機森林分類器（RF）來分析圖像，以判別它們是漫畫封面還是真實照片。
 
 
